@@ -8,7 +8,9 @@ namespace Vending_Machine.Model
 {
     interface IVending
     {
-        int insertMoney();
-        void ShowMenu();
+        //void ShowMenu();
+        //string EssentialInfo();
+        void ReturnMoney(int money);
+        int[] InsertMoney(int mon);
     }
 }

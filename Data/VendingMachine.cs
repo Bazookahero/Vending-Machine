@@ -7,7 +7,7 @@ using Vending_Machine.Model;
 
 namespace Vending_Machine.Data
 {
-    public class VendingMachine //: IVending
+    public class VendingMachine : IVending
     {
         readonly int[] moneyDenom = new int[] { 1000, 500, 100, 50, 20, 10, 5, 1 };
         public int[] MoneyDenom { get { return moneyDenom; } }
@@ -15,10 +15,6 @@ namespace Vending_Machine.Data
         public int insertCounter = 0;
         private int[] money = new int[0];
         public int[] Money { get { return money; } }
-
-
-
-
 
 
 

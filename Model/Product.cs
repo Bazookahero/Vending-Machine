@@ -20,10 +20,6 @@ namespace Vending_Machine.Model
             this.productId = productId;
         }
         public abstract string EssentialInfo();
-        //public virtual string Info()
-        //{
-        //    return
-        //        "" + productId + " " + productName + " " + productPrice;
-        //}
+        
     }
 }

@@ -66,7 +66,7 @@ namespace Vending_Machine
                                 inputVal = int.Parse(Console.ReadLine());
                                 foreach (Product p in prods)
                                 {
-                                    if (inputVal == p.productId && v.Money.Sum() >= p.productPrice)
+                                    if (inputVal == p.productId && remainingSum >= p.productPrice)
                                     {
                                         Console.WriteLine("here you go");
                                         Console.WriteLine(p.EssentialInfo());
@@ -83,6 +83,7 @@ namespace Vending_Machine
                                 }
 
                             } while (inputVal != -1);
+                            Console.WriteLine("pengar tillbaka:");
                             v.ReturnMoney(remainingSum);
                             Console.ReadKey();
                             break;
