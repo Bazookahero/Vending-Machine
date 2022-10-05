@@ -11,7 +11,6 @@ namespace Vending_Machine.Data
     {
         readonly int[] moneyDenom = new int[] { 1000, 500, 100, 50, 20, 10, 5, 1 };
         public int[] MoneyDenom { get { return moneyDenom; } }
-        //public int totalSum;
         public int insertCounter = 0;
         private int[] money = new int[0];
         public int[] Money { get { return money; } }
@@ -21,9 +20,7 @@ namespace Vending_Machine.Data
         public int[] InsertMoney(int mon)
         {
             Array.Resize(ref money, money.Length + 1);
-            //for (int i = 0; i < money.Length; i++)
             money[insertCounter] = mon;
-            //totalSum = totalSum + mon;
             insertCounter++;
             return money;
         }
