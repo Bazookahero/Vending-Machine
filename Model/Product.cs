@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Vending_Machine.Data;
 
 namespace Vending_Machine.Model
@@ -19,5 +20,15 @@ namespace Vending_Machine.Model
             this.productId = productId;
         }
         public abstract string EssentialInfo();
+        public abstract string GetDescription();
+        public virtual string Info()
+        {
+            return $"----- {this.GetType().Name} Info -----\nName: {productName} \nPrice: {productPrice}\nDescription: {GetDescription()}";
+        }
+        //public override string ToString()
+        //{
+        //    return
+        //        "" + productId + " " + productName + " " + productPrice;
+        //}
     }
 }

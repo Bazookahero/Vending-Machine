@@ -8,8 +8,14 @@ namespace Vending_Machine.Model
 {
     public class Food : Product
     {
-        public Food(int productId, string productName, int productPrice) : base(productId, productName, productPrice)
+        public string description { get; set; }
+        public Food(int productId, string productName, int productPrice, string description) : base(productId, productName, productPrice)
         {
+            this.description = description;
+        }
+        public override string GetDescription()
+        {
+            return description;
         }
         public override string EssentialInfo()
         {

@@ -10,15 +10,15 @@ namespace Vending_Machine
             bool reset = false;
             VendingMachine v = new VendingMachine();
             VendingMachineServices b = new VendingMachineServices();
-            Drink soda = new Drink(0, "soda", 20);
-            Drink water = new Drink(1, "water", 30);
-            Drink milk = new Drink(2, "milk", 45);
-            Toy barbie = new Toy(3, "barbie", 70);
-            Toy bear = new Toy(4, "bear", 55);
-            Toy pokémon = new Toy(5, "pokémon", 100);
-            Food apple = new Food(6, "apple", 15);
-            Food sandwich = new Food(7, "sandwich", 35);
-            Food energyBar = new Food(8, "energy bar", 22);
+            Drink soda = new Drink(0, "soda", 20, "sugarfree soda");
+            Drink water = new Drink(1, "water", 30, "ordinary water");
+            Drink milk = new Drink(2, "milk", 45, "fresh milk");
+            Toy barbie = new Toy(3, "barbie", 70, "barbie doll");
+            Toy bear = new Toy(4, "bear", 55, "stuffed bear");
+            Toy pokémon = new Toy(5, "pokémon", 100, "mewtwo");
+            Food apple = new Food(6, "apple", 15, "red apple");
+            Food sandwich = new Food(7, "sandwich", 35, "ham and cheese");
+            Food energyBar = new Food(8, "energy bar", 22, "chocolate taste");
             Product[] prods = new Product[] { soda, water, milk, barbie, bear, pokémon, apple, sandwich, energyBar };
             try
             {
@@ -81,6 +81,13 @@ namespace Vending_Machine
                             Console.ReadKey();
                             break;
                         case 3:
+                            Console.Clear();
+                            foreach (Product p in prods)
+                            { Console.WriteLine(p.Info()); }
+                            Console.ReadKey();
+                            break;
+                        case 4:
+                            Console.WriteLine("exiting");
                             Console.ReadKey();
                             Environment.Exit(-1);
                             break;

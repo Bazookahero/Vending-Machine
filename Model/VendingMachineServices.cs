@@ -13,11 +13,11 @@ namespace Vending_Machine.Model
     {
         private Product[] products = new Product[9];
         public Product[]? Products { get { return products; } }
-        
+
         public void ShowMenu()
         {
             Console.Clear();
-            Console.WriteLine($"1.Insert money\n2.Show list of products\n3.Exit");
+            Console.WriteLine($"1.Insert money\n2.Buy stuff\n3.Show info\n4.Exit");
         }
     }
 }
