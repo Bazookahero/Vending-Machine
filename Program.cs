@@ -10,15 +10,15 @@ namespace Vending_Machine
             bool reset = false;
             VendingMachine v = new VendingMachine();
             VendingMachineServices b = new VendingMachineServices();
-            Drink soda = new Drink(0, "soda", 20, "sugarfree soda");
-            Drink water = new Drink(1, "water", 30, "ordinary water");
-            Drink milk = new Drink(2, "milk", 45, "fresh milk");
-            Toy barbie = new Toy(3, "barbie", 70, "barbie doll");
-            Toy bear = new Toy(4, "bear", 55, "stuffed bear");
-            Toy pokémon = new Toy(5, "pokémon", 100, "mewtwo");
-            Food apple = new Food(6, "apple", 15, "red apple");
-            Food sandwich = new Food(7, "sandwich", 35, "ham and cheese");
-            Food energyBar = new Food(8, "energy bar", 22, "chocolate taste");
+            Drink soda = new Drink(0, "soda", 20, "sugarfree soda", true);
+            Drink water = new Drink(1, "water", 30, "ordinary water", false);
+            Drink milk = new Drink(2, "milk", 45, "fresh milk", false);
+            Toy barbie = new Toy(3, "barbie", 70, "barbie doll", 3);
+            Toy bear = new Toy(4, "bear", 55, "stuffed bear", 0);
+            Toy pokémon = new Toy(5, "pokémon", 100, "mewtwo", 10);
+            Food apple = new Food(6, "apple", 15, "red apple", true);
+            Food sandwich = new Food(7, "sandwich", 35, "ham and cheese", false);
+            Food energyBar = new Food(8, "energy bar", 22, "chocolate taste", false);
             Product[] prods = new Product[] { soda, water, milk, barbie, bear, pokémon, apple, sandwich, energyBar };
             try
             {
@@ -83,7 +83,7 @@ namespace Vending_Machine
                         case 3:
                             Console.Clear();
                             foreach (Product p in prods)
-                            { Console.WriteLine(p.Info()); }
+                                Console.WriteLine(p.Info()); 
                             Console.ReadKey();
                             break;
                         case 4:

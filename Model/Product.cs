@@ -21,10 +21,9 @@ namespace Vending_Machine.Model
         }
         public abstract string EssentialInfo();
         public abstract string GetDescription();
-        public virtual string Info()
-        {
-            return $"----- {this.GetType().Name} Info -----\nName: {productName} \nPrice: {productPrice}\nDescription: {GetDescription()}";
-        }
+        public abstract string Info();
+
+        
         //public override string ToString()
         //{
         //    return
