@@ -17,11 +17,15 @@ namespace Vending_Machine.Data
 
         public int[] InsertMoney(int mon)
         {
-            Array.Resize(ref money, money.Length + 1);
-            money[insertCounter] = mon;
-            insertCounter++;
+            if (moneyDenom.Contains(mon))
+            {
+                Array.Resize(ref money, money.Length + 1);
+                money[insertCounter] = mon;
+                insertCounter++;
+            }
             return money;
         }
+
         public void ReturnMoney(int money)
         {
             int payChange = money;
