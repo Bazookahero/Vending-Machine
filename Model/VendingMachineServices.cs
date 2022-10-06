@@ -14,7 +14,6 @@ namespace Vending_Machine.Model
         private Product[] products = new Product[9];
         public Product[]? Products { get { return products; } }
         
-
         public void ShowMenu()
         {
             Console.Clear();

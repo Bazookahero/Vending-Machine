@@ -9,7 +9,6 @@ namespace Vending_Machine.Model
 {
     public abstract class Product : VendingMachine
     {
-
         public string productName { get; set; }
         public int productPrice { get; set; }
         public int productId { get; private set; }
@@ -20,6 +19,5 @@ namespace Vending_Machine.Model
             this.productId = productId;
         }
         public abstract string EssentialInfo();
-        
     }
 }

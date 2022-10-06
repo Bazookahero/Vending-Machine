@@ -20,7 +20,6 @@ namespace Vending_Machine
             Food sandwich = new Food(7, "sandwich", 35);
             Food energyBar = new Food(8, "energy bar", 22);
             Product[] prods = new Product[] { soda, water, milk, barbie, bear, pokémon, apple, sandwich, energyBar };
-            
             try
             {
                 while (reset == false)
@@ -31,7 +30,6 @@ namespace Vending_Machine
                     int remainingSum;
                     switch (userInput)
                     {
-
                         case 1:
                             while (userInput != -1)
                             {
@@ -44,9 +42,7 @@ namespace Vending_Machine
                                 }
                                 else if (userInput != -1)
                                 { Console.WriteLine("please insert a valid denomination"); }
-
                                 Console.ReadKey();
-                                
                             }
                             break;
                         case 2:
@@ -57,10 +53,8 @@ namespace Vending_Machine
                                 Console.Clear();
                                 foreach (Product p in prods)
                                     if(p != null)
-                                {
-                                        
-                                        Console.WriteLine($"----- Info -----\nID:{p.productId}\nName: {p.productName} \nPrice: {p.productPrice}"); 
-                                        
+                                {      
+                                        Console.WriteLine($"----- Info -----\nID:{p.productId}\nName: {p.productName} \nPrice: {p.productPrice}");       
                                 }
                                 Console.WriteLine("\nChoose product by ID, you have {0} cash left. Type -1 to cash out", remainingSum);
                                 inputVal = int.Parse(Console.ReadLine());
@@ -81,14 +75,12 @@ namespace Vending_Machine
                                         break;
                                     }                                  
                                 }
-
                             } while (inputVal != -1);
                             Console.WriteLine("pengar tillbaka:");
                             v.ReturnMoney(remainingSum);
                             Console.ReadKey();
                             break;
                         case 3:
-                            
                             Console.ReadKey();
                             Environment.Exit(-1);
                             break;

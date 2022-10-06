@@ -8,7 +8,6 @@ namespace Vending_Machine.Model
 {
     public class Drink : Product
     {
-
         public Drink(int productId, string productName, int productPrice) : base(productId, productName, productPrice)
         {
         }
